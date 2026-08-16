@@ -1,0 +1,35 @@
+{
+  "name": "deepseek-harness-desktop-shell",
+  "version": "0.1.0",
+  "private": true,
+  "main": "main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "check": "node --check main.cjs && node --check preload.cjs",
+    "dist:win": "electron-builder --win portable"
+  },
+  "build": {
+    "appId": "com.deepseekh.desktop.shell",
+    "productName": "DeepSeek Harness",
+    "directories": {
+      "output": "publish"
+    },
+    "files": [
+      "main.cjs",
+      "preload.cjs",
+      "package.json",
+      "assets/icon.ico"
+    ],
+    "win": {
+      "target": ["portable"],
+      "icon": "assets/icon.ico"
+    },
+    "portable": {
+      "artifactName": "DeepSeekHarness-Electron-Portable.exe"
+    }
+  },
+  "devDependencies": {
+    "electron": "43.1.0",
+    "electron-builder": "26.15.3"
+  }
+}

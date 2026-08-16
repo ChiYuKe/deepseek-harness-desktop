@@ -1,0 +1,124 @@
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--dsw-alias-border-l2);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.title {
+  color: var(--dsw-alias-label-primary);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.description,
+.message,
+.meta {
+  color: var(--dsw-alias-label-secondary);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.button {
+  min-height: 30px;
+  padding: 5px 10px;
+  border: 1px solid var(--dsw-alias-border-l2);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--dsw-alias-label-primary);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.button:hover:not(:disabled) {
+  background: var(--dsw-alias-interactive-bg-hover);
+}
+
+.button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.message {
+  padding: 10px 12px;
+  border-radius: 9px;
+  background: var(--dsw-alias-bg-module-platform);
+}
+
+.windows {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.window {
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid var(--dsw-alias-border-l2);
+  border-radius: 10px;
+  background: var(--dsw-alias-bg-layer-1);
+}
+
+.windowHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--dsw-alias-label-secondary);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.percent {
+  color: var(--dsw-alias-label-primary);
+  font-weight: 600;
+}
+
+.track {
+  height: 6px;
+  margin: 9px 0 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--dsw-alias-bg-module-platform);
+}
+
+.fill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--dsw-alias-brand-primary);
+  transition: width 160ms ease;
+}
+
+.reset {
+  color: var(--dsw-alias-label-tertiary);
+  font-size: 11px;
+  line-height: 16px;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.stale {
+  color: var(--dsw-alias-state-warning-primary);
+}
+
+@media (max-width: 640px) {
+  .windows {
+    grid-template-columns: 1fr;
+  }
+}

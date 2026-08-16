@@ -1,0 +1,7 @@
+# Electron shell build outputs
+desktop-shell-electron/node_modules/
+desktop-shell-electron/publish/
+desktop-shell-electron/publish-*/
+
+# Plugin build outputs
+plugins/*/lib/

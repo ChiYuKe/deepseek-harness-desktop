@@ -1,0 +1,107 @@
+/* Font settings row (General section): title + three labeled fields, a live
+   preview strip, and the reset control. Geometry mirrors the sibling
+   Appearance/Language rows (16px pads, hairline separator). */
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--dsw-alias-border-l2);
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var(--dsw-alias-label-primary);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--dsw-alias-label-secondary);
+}
+
+.input,
+.select,
+.sizeInput {
+  box-sizing: border-box;
+  width: 100%;
+  height: 32px;
+  padding: 0 10px;
+  border: 1px solid var(--dsw-alias-border-l2);
+  border-radius: 8px;
+  background: var(--dsw-alias-bg-module-platform);
+  color: var(--dsw-alias-label-primary);
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.select {
+  padding-right: 30px;
+  cursor: pointer;
+}
+
+.input:focus,
+.select:focus,
+.sizeInput:focus {
+  outline: none;
+  border-color: var(--dsw-alias-brand-primary);
+}
+
+.input::placeholder,
+.sizeInput::placeholder {
+  color: var(--dsw-alias-label-tertiary);
+}
+
+.sizeWrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sizeInput {
+  width: 96px;
+  flex: none;
+}
+
+.unit {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--dsw-alias-label-tertiary);
+}
+
+/* Live preview: shows the draft output stack, so a change is visible before
+   the settings round trip settles. */
+.preview {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: var(--dsw-alias-bg-module-platform);
+}
+
+.previewLabel {
+  font-size: 11px;
+  line-height: 16px;
+  color: var(--dsw-alias-label-tertiary);
+}
+
+.previewText {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--dsw-alias-label-primary);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}

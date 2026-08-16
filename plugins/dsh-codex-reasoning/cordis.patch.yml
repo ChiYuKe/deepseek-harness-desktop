@@ -1,0 +1,5 @@
+# Install this bundle into a DSH profile to keep the Codex model catalog's
+# reasoning controls synchronized with the user settings document.
+- insert:
+    - id: dsh-codex-reasoning
+      name: dsh-codex-reasoning

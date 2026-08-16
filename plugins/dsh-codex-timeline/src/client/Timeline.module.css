@@ -1,0 +1,112 @@
+.root {
+  display: inline-flex;
+}
+
+.trigger {
+  align-items: center;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: var(--text-secondary, #c6cad4);
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  min-height: 30px;
+  padding: 0 10px;
+}
+
+.trigger:hover,
+.trigger[aria-expanded='true'] {
+  background: var(--fill-tertiary, #3a3d45);
+  color: var(--text-primary, #fff);
+}
+
+.portal {
+  inset: 0;
+  pointer-events: none;
+  position: fixed;
+  z-index: 940;
+}
+
+.rail {
+  pointer-events: auto;
+  position: fixed;
+  width: 26px;
+}
+
+.track {
+  background: color-mix(in srgb, var(--border-primary, #4b4f59) 82%, transparent);
+  border-radius: 2px;
+  height: 100%;
+  left: 9px;
+  position: absolute;
+  top: 0;
+  width: 2px;
+}
+
+.marker {
+  background: var(--text-tertiary, #858b99);
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  height: 2px;
+  left: 0;
+  min-width: 20px;
+  padding: 0;
+  position: absolute;
+  transform: translateY(-1px);
+  transition: background .12s ease, height .12s ease, min-width .12s ease;
+}
+
+.marker:hover,
+.marker[data-active='true'] {
+  background: var(--dsw-static-deepseek-500, #6e9cf5);
+  height: 4px;
+  min-width: 26px;
+}
+
+.marker[data-kind='context'] { background: #8a83d9; }
+.marker[data-kind='user'] { background: #b98de4; }
+.marker[data-kind='assistant'] { background: #87aee9; }
+.marker[data-kind='tool'] { background: #8b939f; }
+
+.preview {
+  background: var(--dsw-alias-fill-primary, #303136);
+  border: 1px solid var(--dsw-alias-line-primary, #4a4d55);
+  border-radius: 9px;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, .35);
+  color: var(--dsw-alias-label-primary, #f0f2f6);
+  max-width: min(380px, calc(100vw - 80px));
+  min-width: 220px;
+  padding: 12px 14px;
+  pointer-events: auto;
+  position: fixed;
+}
+
+.previewTitle {
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.35;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.previewText {
+  color: var(--dsw-alias-label-secondary, #c2c6cf);
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 7px 0 0;
+  max-height: 72px;
+  overflow: hidden;
+}
+
+.previewMeta {
+  color: var(--dsw-alias-label-tertiary, #9aa0ad);
+  font-size: 11px;
+  line-height: 1.4;
+  margin-top: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
