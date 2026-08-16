@@ -69,3 +69,7 @@ git add deepseek-harness && git commit -m "chore: bump deepseek-harness"
 
 - 子模块为纯净上游，不含旧 fork 里的 `api-proxy.ts` 补丁（`ui-background` 设置白名单），因此 background 插件的设置页可能不显示；插件其余功能不受影响。
 - 旧仓库 https://github.com/ChiYuKe/deepseek-harness 保留作备份（含完整旧历史），确认稳定后可删除。
+
+## 许可证
+
+[MIT](LICENSE)，与官方 [deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) 一致。子模块 `deepseek-harness/` 遵循其自身的 MIT 许可（见 `deepseek-harness/LICENSE`）。
