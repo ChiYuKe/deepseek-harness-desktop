@@ -45,7 +45,7 @@ deepseek-harness-desktop/
 - `build-webui-shell-electron.bat`：构建 Electron 桌面壳（install → check → electron-builder portable）；
 - `start-webui-shell-electron.bat`：启动 Electron 桌面壳（优先目录版，缺产物自动构建），通过 `DSH_PROJECT_ROOT` 指向 `deepseek-harness\` 子模块。
 
-壳的详细说明见 [desktop-shell-electron/README.zh.md](desktop-shell-electron/README.zh.md)。
+壳的详细说明见 [desktop-shell-electron/README.md](desktop-shell-electron/README.md)。
 
 ## 子模块版本
 
