@@ -13,7 +13,7 @@ deepseek-harness-desktop/
 ├── restart-deepseek-harness.bat
 ├── build-webui-shell-electron.bat
 ├── start-webui-shell-electron.bat
-└── README.zh.md
+└── README.md
 ```
 
 ## 首次使用
@@ -33,6 +33,8 @@ deepseek-harness-desktop/
    pnpm install
    pnpm run build
    ```
+
+   > Windows 注意：子模块首次 `pnpm install` 时，postinstall（lefthook 钩子安装）可能因子模块 git 布局报 `core.worktree` / `extensions.worktreeConfig` 错误。按报错提示手工修复 `.git/modules/deepseek-harness/config`（将 `core.worktree` 移入 `config.worktree`、启用 `extensions.worktreeConfig`、`repositoryformatversion` 设为 1）后重跑 `pnpm install` 即可。
 
 3. 配置插件接入：`$DSH_HOME\profiles\web\package.json` 里的 `link:` 路径指向本仓库的 `plugins/` 目录（见「插件」）。
 
